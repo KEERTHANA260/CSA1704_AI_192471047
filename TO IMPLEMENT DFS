@@ -21,3 +21,6 @@ if __name__ == "__main__":
     start_node = 'A'
     print("DFS Traversal:", end=" ")
     dfs(graph, start_node)
+
+O/P
+DFS Traversal: A B D E F C
