@@ -30,3 +30,22 @@ def vacuum_cleaner():
     print("Vacuum cleaner has cleaned both rooms successfully!")
 
 vacuum_cleaner()
+
+O/P
+Enter initial location of vacuum cleaner (A or B): A
+Is room A dirty? (yes/no): yes
+Is room B dirty? (yes/no): yes
+
+Initial State:
+Vacuum is at room A
+Room A: Dirty
+Room B: Dirty
+
+Room A is dirty. Cleaning room A...
+Moving to room B...
+Room B is dirty. Cleaning room B...
+
+Final State:
+Room A: Clean
+Room B: Clean
+Vacuum cleaner has cleaned both rooms successfully!
