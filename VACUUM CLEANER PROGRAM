@@ -1,0 +1,32 @@
+def vacuum_cleaner():
+    location = input("Enter initial location of vacuum cleaner (A or B): ").upper()
+    room_A = input("Is room A dirty? (yes/no): ").lower()
+    room_B = input("Is room B dirty? (yes/no): ").lower()
+
+    print("\nInitial State:")
+    print(f"Vacuum is at room {location}")
+    print(f"Room A: {'Dirty' if room_A == 'yes' else 'Clean'}")
+    print(f"Room B: {'Dirty' if room_B == 'yes' else 'Clean'}\n")
+    if location == 'A':
+        if room_A == "yes":
+            print("Room A is dirty. Cleaning room A...")
+            room_A = "no"
+        print("Moving to room B...")
+        if room_B == "yes":
+            print("Room B is dirty. Cleaning room B...")
+            room_B = "no"
+
+    elif location == 'B':
+        if room_B == "yes":
+            print("Room B is dirty. Cleaning room B...")
+            room_B = "no"
+        print("Moving to room A...")
+        if room_A == "yes":
+            print("Room A is dirty. Cleaning room A...")
+            room_A = "no"
+    print("\nFinal State:")
+    print(f"Room A: {'Dirty' if room_A == 'yes' else 'Clean'}")
+    print(f"Room B: {'Dirty' if room_B == 'yes' else 'Clean'}")
+    print("Vacuum cleaner has cleaned both rooms successfully!")
+
+vacuum_cleaner()
