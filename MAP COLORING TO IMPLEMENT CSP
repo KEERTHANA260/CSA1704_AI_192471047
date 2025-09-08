@@ -1,0 +1,34 @@
+neighbors = {
+    "A": ["B", "C"],
+    "B": ["A", "C", "D"],
+    "C": ["A", "B", "D"],
+    "D": ["B", "C"]
+}
+
+colors = ["Red", "Green", "Blue"]
+
+def is_valid(state, color, assignment):
+    for n in neighbors[state]:
+        if n in assignment and assignment[n] == color:
+            return False
+    return True
+
+def backtrack(assignment):
+    if len(assignment) == len(neighbors):
+        return assignment
+    
+    state = [s for s in neighbors if s not in assignment][0]
+    for color in colors:
+        if is_valid(state, color, assignment):
+            assignment[state] = color
+            result = backtrack(assignment)
+            if result:
+                return result
+            assignment.pop(state)
+    return None
+solution = backtrack({})
+print("Solution:", solution)
+
+O/P
+Solution: {'A': 'Red', 'B': 'Green', 'C': 'Blue', 'D': 'Red'}
+
