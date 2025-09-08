@@ -40,3 +40,7 @@ jug2_capacity = 3
 target = 2
 
 water_jug_bfs(jug1_capacity, jug2_capacity, target)
+
+O/P
+Solution found:
+Jug1 = 2 liters, Jug2 = 0 liters
