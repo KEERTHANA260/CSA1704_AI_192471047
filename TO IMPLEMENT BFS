@@ -28,3 +28,6 @@ if __name__ == "__main__":
 
     start_node = 'A'
     print("BFS Traversal:", bfs(graph, start_node))
+
+O/P
+BFS Traversal: ['A', 'B', 'C', 'D', 'E', 'F']
