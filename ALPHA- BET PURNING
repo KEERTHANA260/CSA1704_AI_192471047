@@ -1,0 +1,18 @@
+def alphabeta(depth,node,isMax,alpha,beta):
+    scores=[3,5,6,9,1,2,0,-1]
+    if depth==3: return scores[node]
+    if isMax:
+        v=-999
+        for i in range(2):
+            v=max(v,alphabeta(depth+1,node*2+i,False,alpha,beta))
+            alpha=max(alpha,v)
+            if beta<=alpha: break
+        return v
+    else:
+        v=999
+        for i in range(2):
+            v=min(v,alphabeta(depth+1,node*2+i,True,alpha,beta))
+            beta=min(beta,v)
+            if beta<=alpha: break
+        return v
+print("Value:",alphabeta(0,0,True,-999,999))
